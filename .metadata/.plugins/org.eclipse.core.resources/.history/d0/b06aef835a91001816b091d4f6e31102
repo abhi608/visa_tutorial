@@ -73,7 +73,6 @@ public class FrontController extends HttpServlet {
 			} else if(uri.endsWith("report.do")) {
 				RentalDao rentalDao = new RentalDaoJpaImpl();
 				request.setAttribute("reports", rentalDao.getReport());
-				request.getRequestDispatcher("report.jsp").forward(request, response);
 			}
 		}
 	}
