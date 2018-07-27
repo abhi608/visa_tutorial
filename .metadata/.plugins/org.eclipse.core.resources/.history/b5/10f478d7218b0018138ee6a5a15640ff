@@ -1,0 +1,24 @@
+package com.visa.prj.util;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ArrayUtilTest {
+
+	@Test
+	public void testGetSum() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetOccuranceCount() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSort() {
+		fail("Not yet implemented");
+	}
+
+}

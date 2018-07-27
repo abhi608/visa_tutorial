@@ -1,0 +1,15 @@
+package com.visa.prj.client;
+
+import com.visa.prj.entity.Account;
+
+public class AccountClient {
+	public static void main(String[] args) {
+		Account rahulAcc = new Account();
+		Account swethaAcc = new Account();
+		rahulAcc.deposit(4500.00); // evaluates to deposit(rahulAcc, 4500.00) - optimization
+		swethaAcc.deposit(6780.00);
+		
+		System.out.println(rahulAcc.getBalance());
+		System.out.println(swethaAcc.getBalance());
+	}
+}

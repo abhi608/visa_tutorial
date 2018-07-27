@@ -1,0 +1,23 @@
+package com.visa.prj.client;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
+import com.visa.prj.entity.Product;
+import com.visa.prj.util.JPAUtil;
+
+import javassist.bytecode.stackmap.TypeData;
+
+public class ProductJPQLClient {
+	public static void main(String[] args) {
+		/*
+		 * JPQL uses class and fields and not table and columns
+		 * JPQL is case-sensitive about class and attributes
+		 * JPQL is polymorphic
+		 */
+		EntityManager em = JPAUtil.getEntityManager();
+		String qry = "SELECT p from Product p where p.category =:cat and p.price >: amt";
+		TypedQuery<Product> query = em.createQuery(qry, Product.class);
+		
+	}
+}

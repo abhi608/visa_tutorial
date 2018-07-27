@@ -1,0 +1,45 @@
+package com.visa.prj.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import com.visa.prj.entity.Employee;
+import com.visa.prj.entity.Issue;
+import com.visa.prj.util.JPAUtil;
+
+public class IssueDaoJpaImpl implements IssueDao {
+
+	@Override
+	public void addEmployee(Employee emp) throws DaoException {
+		EntityManager em = JPAUtil.getEntityManager();
+		em.getTransaction().begin();
+		em.persist(emp);
+		em.getTransaction().commit();
+	}
+
+	@Override
+	public List<Employee> getEmployees() throws DaoException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void raiseIssue(Issue issue) throws DaoException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Issue> getUnresolvedIssues() throws DaoException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void resolveIssue(Issue issue) throws DaoException {
+		// TODO Auto-generated method stub
+
+	}
+
+}

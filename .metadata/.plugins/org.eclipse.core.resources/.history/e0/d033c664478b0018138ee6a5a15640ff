@@ -1,0 +1,53 @@
+package com.visa.prj.service;
+
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.doNothing;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+
+import com.visa.prj.dao.UserDao;
+
+public class DataServiceTest {
+	
+	@Mock
+	private List<String> list = Mockito.mock(List.class);
+
+	private DataService dataService;
+	
+	@Before
+	public void setUp() throws Exception {
+		dataService = new DataService();
+		dataService.setList(list);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		dataService = null;
+	}
+
+	@Test
+	public void testAdd() {
+		List<String> s1 = Arrays.asList("test", "is"); 
+		
+		try {
+			doNothing().when(dataService).add(s1);
+			assertEquals(1, dataService.getSize());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Test
+	public void testRemove() {
+		fail("Not yet implemented");
+	}
+
+}

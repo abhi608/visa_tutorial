@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;KeyboardUtil.java&apos; to &apos;issuetrackapp/src/main/java/com.visa.prj.client&apos;&#x0D;&#x0A;- Original project: &apos;bookapp&apos;&#x0D;&#x0A;- Destination element: &apos;issuetrackapp/src/main/java/com.visa.prj.client&apos;&#x0D;&#x0A;- Original element: &apos;com.visa.prj.client.KeyboardUtil.java&apos;" description="Copy compilation unit" destination="=issuetrackapp/src\/main\/java&lt;com.visa.prj.client" element1="/src\/main\/java&lt;com.visa.prj.client{KeyboardUtil.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1532347093382" units="1" version="1.0"/>
+</session>

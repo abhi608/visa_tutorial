@@ -1,0 +1,7 @@
+package com.visa.prj.dao;
+
+import com.visa.prj.entity.Rental;
+
+public interface RentalDao {
+	void addRental(Rental rental);
+}

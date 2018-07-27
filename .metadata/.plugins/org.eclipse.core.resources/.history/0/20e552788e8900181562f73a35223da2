@@ -1,0 +1,13 @@
+package com.visa.prj.client;
+
+import com.visa.prj.util.Compute;
+
+public class FunctionalExample {
+	public static void main(String[] args) {
+		Compute<Integer> c = (x, y) -> {
+			int z = x + y;
+			System.out.println(z);
+		};
+		c.add(4, 5);
+	}
+}

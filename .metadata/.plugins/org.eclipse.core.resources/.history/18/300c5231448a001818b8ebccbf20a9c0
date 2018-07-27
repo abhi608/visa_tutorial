@@ -1,0 +1,36 @@
+package com.visa.prj.client;
+
+import java.util.Arrays;
+import java.util.List;
+
+@FunctionalInterface
+interface Consumer<T> {
+	void accept(T obj);
+}
+
+public class FunctionalExample {
+	public static void main(String[] args) {
+		List<Integer> list = Arrays.asList(34,67,2,78,1,98,23,15,20);
+		List<Double> dlist = Arrays.asList(34.1,67.4,2.4,78.6,1.6,98.0,23.45,15.34,20.12);
+		
+		print(list);
+		print(dlist);
+//		iterate(list, (arg) -> System.out.println(arg));
+//		iterate(list, arg -> System.out.println(arg));
+		iterate(list, System.out::println);
+		iterate(dlist, System.out::println);
+	}
+	
+	private static void print(List<?> list) {
+		for(Object obj : list) {
+			System.out.println(obj);
+		}
+	}
+	
+	private static <T> void iterate(List<? extends T> list, Consumer<? super T> cons) {
+//		can store T or any of its supertype | if T is integer, ? super T includes Numbers and Object
+		for(T i : list) {
+			cons.accept(i);
+		}
+	}
+}

@@ -1,0 +1,22 @@
+package com.visa.prj.entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="issues")
+public class Issue {
+	private int id;
+	
+	private String des;
+	
+	private Date raisedDate;
+	
+	private Date resolvedDate;
+	
+	private String solution;
+	
+	
+}

@@ -1,0 +1,20 @@
+package com.visa.prj.util;
+
+import java.util.Arrays;
+
+public class ArrayUtil {
+	public static int getSum(int[] elems) {
+		int sum = 0;
+		return sum;
+	}
+	
+	public static int getOccuranceCount(int[] elems, int no) {
+		// TODO Auto-generated method stub
+		int count = 0;
+		return count;
+	}
+	
+	public static void sort(int[] elems) {
+		Arrays.sort(elems);
+	}
+}

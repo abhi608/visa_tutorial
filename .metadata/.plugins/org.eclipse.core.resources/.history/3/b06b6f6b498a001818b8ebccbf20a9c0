@@ -1,0 +1,19 @@
+package com.visa.prj.client;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import com.visa.prj.entity.Product;
+
+public class ProductClient {
+	public static void main(String[] args) {
+		Product[] products = new Product[4];
+		products[0] = new Mobile(124, "iPhone x", 120000.00, "4G"); // upcasting
+		products[1] = new Tv(634, "Onida", 3500.00, "CRT");
+		products[2] = new Mobile(611, "MotoG", 12999.00, "4G");
+		products[3] = new Tv(72, "Sony Bravia", 103500.00, "LED");
+		
+		
+	}
+	
+}

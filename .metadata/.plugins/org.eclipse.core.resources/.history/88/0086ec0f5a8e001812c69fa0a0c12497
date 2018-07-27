@@ -1,0 +1,38 @@
+package com.visa.prj.entity;
+
+import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name="orders")
+public class Order {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
+	@Column(name="order_id")
+	private int orderId;
+	
+	@ManyToOne
+	@JoinColumn(name="customer_fk") // required to create a foreign key
+	private Customer customer;
+	
+	private double total;
+	
+	@Column(name="order_date")
+	@Temporal(TemporalType.TIMESTAMP) // takes epoch as timestamp, not specifying this takes Date object
+	private Date orderDate;
+	
+	private List<LineItem> items = new ArrayList<>();
+}

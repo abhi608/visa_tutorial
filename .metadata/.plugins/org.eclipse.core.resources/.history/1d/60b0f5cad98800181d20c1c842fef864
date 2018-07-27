@@ -1,0 +1,28 @@
+package com.visa.prj.entity;
+
+public class Time {
+	private int hours;
+	private int minutes;
+	public Time(int hours, int minutes) {
+		super();
+		this.hours = hours;
+		this.minutes = minutes;
+	}
+
+	public static Time add(Time t1, Time t2) {
+		int epoch = t1.getHours()*60 + t1.getMinutes() + t2.getHours()*60 + t2.getMinutes();
+		int hours = epoch/60;
+		int minutes = epoch%60;
+		Time t3 = new Time(hours, minutes);
+		
+	}
+	
+	public int getHours() {
+		return this.hours;
+	}
+	
+	public int getMinutes() {
+		return this.minutes;
+	}
+	
+}

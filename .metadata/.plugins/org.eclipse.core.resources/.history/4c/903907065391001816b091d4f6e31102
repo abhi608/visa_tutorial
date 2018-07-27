@@ -1,0 +1,22 @@
+package com.visa.prj.dao;
+
+import java.util.List;
+
+import com.visa.prj.dto.RentalReportDTO;
+import com.visa.prj.entity.Rental;
+
+public class RentalDaoJpaImpl implements RentalDao {
+
+	@Override
+	public void addRental(Rental rental) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<RentalReportDTO> getReport() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

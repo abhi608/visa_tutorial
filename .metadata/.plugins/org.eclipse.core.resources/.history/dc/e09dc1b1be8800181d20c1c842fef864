@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.visa.prj.entity;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Account {
+
+}

@@ -1,0 +1,33 @@
+package com.visa.prj.dto;
+
+import java.util.Date;
+
+public class RentalReportDTO {
+	private int id;
+	private String email;
+	private String registrationNumber;
+	private String vehicleType;
+	private String fuelType;
+	private double totalAmount;
+	private Date rentalDate;
+	
+	
+	
+	public RentalReportDTO() {
+	}
+
+
+
+	public RentalReportDTO(int id, String email, String registrationNumber, String vehicleType, String fuelType,
+			double totalAmount, Date rentalDate) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.registrationNumber = registrationNumber;
+		this.vehicleType = vehicleType;
+		this.fuelType = fuelType;
+		this.totalAmount = totalAmount;
+		this.rentalDate = rentalDate;
+	}
+	
+}

@@ -1,0 +1,41 @@
+package com.visa.prj.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name="issues")
+public class Issue {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(name="des")
+	private String description;
+	
+	@Column(name="raised_date")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date raisedDate;
+	
+	@Column(name="resolved_date")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date resolvedDate;
+	
+	@Column(name="sol")
+	private String solution;
+	
+	
+	private Employee issueRaisedBy;
+	
+	private Employee issueResolvedBy;
+	
+	
+}

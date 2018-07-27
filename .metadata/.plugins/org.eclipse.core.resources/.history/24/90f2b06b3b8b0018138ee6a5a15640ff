@@ -1,0 +1,6 @@
+package com.visa.prj.dao;
+
+public interface List {
+	int add(int x);
+	int remove();
+}

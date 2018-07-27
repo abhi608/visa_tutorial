@@ -1,0 +1,21 @@
+package com.visa.prj.dao;
+
+import java.util.List;
+
+import com.visa.prj.entity.Vehicle;
+
+public class VehicleDaoJpaImpl implements VehicleDao {
+
+	@Override
+	public void addVehicle(Vehicle v) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<String> getRegNos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,10 @@
+127.0.0.1 - - [27/Jul/2018:05:25:38 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [27/Jul/2018:05:25:40 +0100] "GET /vehiclerental/ HTTP/1.1" 200 517
+0:0:0:0:0:0:0:1 - - [27/Jul/2018:05:26:47 +0100] "GET /vehiclerental/rentalForm.do HTTP/1.1" 200 946
+0:0:0:0:0:0:0:1 - - [27/Jul/2018:05:28:04 +0100] "POST /vehiclerental/hireVehicle.do HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [27/Jul/2018:05:28:04 +0100] "GET /vehiclerental/index.jsp?msg=Rental%20details%20saved!!! HTTP/1.1" 200 517
+127.0.0.1 - - [27/Jul/2018:05:40:57 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [27/Jul/2018:05:40:59 +0100] "GET /vehiclerental/ HTTP/1.1" 200 538
+0:0:0:0:0:0:0:1 - - [27/Jul/2018:05:41:14 +0100] "GET /vehiclerental/rentalForm.do HTTP/1.1" 200 946
+0:0:0:0:0:0:0:1 - - [27/Jul/2018:05:41:31 +0100] "POST /vehiclerental/hireVehicle.do HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [27/Jul/2018:05:41:31 +0100] "GET /vehiclerental/index.jsp?msg=Rental%20details%20saved!!! HTTP/1.1" 200 561

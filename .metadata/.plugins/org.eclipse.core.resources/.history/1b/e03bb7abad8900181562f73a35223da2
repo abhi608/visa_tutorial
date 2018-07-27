@@ -1,0 +1,35 @@
+package com.visa.prj.client;
+
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Task {
+	public static void main(String[] args) {
+		String sentence = "I came I saw U came I left";
+		Set<String> unique = new HashSet<>();
+		Set<String> dups = new HashSet<>();
+		List<String> st = new ArrayList<>();
+		
+		for(String str: sentence.split(" ")) {
+			if(st.add(str)) {
+				unique.add(str);
+			}
+			else {
+				unique.remove(str);
+				dups.add(str);
+			}
+		}
+		
+		for(String s: unique) {
+			System.out.println(s);
+		}
+		System.out.println("--------------------");
+		for(String s: dups) {
+			System.out.println(s);
+		}
+		
+	}
+}

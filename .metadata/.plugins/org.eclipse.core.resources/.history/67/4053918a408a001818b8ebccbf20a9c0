@@ -1,0 +1,11 @@
+package com.visa.prj.client;
+
+interface consumer<T> {
+	void accept(T obj);
+}
+
+public class FunctionalExample {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,7 @@
+package com.visa.prj.client;
+
+import com.visa.prj.entity.Time;
+
+public class TimeClient {
+
+}

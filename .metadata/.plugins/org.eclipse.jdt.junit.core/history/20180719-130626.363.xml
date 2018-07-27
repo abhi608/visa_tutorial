@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DataServiceTest" project="unitTesting" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.visa.prj.service.DataServiceTest" time="0.025">
+    <testcase name="testAdd" classname="com.visa.prj.service.DataServiceTest" time="0.022"/>
+    <testcase name="testRemove" classname="com.visa.prj.service.DataServiceTest" time="0.003"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,24 @@
+package com.visa.prj.client;
+
+import java.util.Arrays;
+import java.util.List;
+
+@FunctionalInterface
+interface Consumer<T> {
+	void accept(T obj);
+}
+
+public class FunctionalExample {
+	public static void main(String[] args) {
+		List<Integer> list = Arrays.asList(34,67,2,78,1,98,23,15,20);
+		iterate(list, (arg) -> System.out.println(arg));
+//		iterate(list, arg -> System.out.println(arg));
+//		iterate(list, System.out::println);
+	}
+	
+	private static void iterate(List<Integer> list, Consumer<Integer> cons) {
+		for(Integer i : list) {
+			cons.accept(i);
+		}
+	}
+}
