@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.visa.prj.dao.RentalDao;
 import com.visa.prj.dao.RentalDaoJpaImpl;
@@ -74,6 +75,18 @@ public class FrontController extends HttpServlet {
 				RentalDao rentalDao = new RentalDaoJpaImpl();
 				request.setAttribute("reports", rentalDao.getReport());
 				request.getRequestDispatcher("report.jsp").forward(request, response);
+			} else if(uri.endsWith("login.do")) {
+				// user customerDao to check if user is a valid user
+				// true => creates a session if session doesn't exist else it fetches existing session
+				// false => fetch existing session if it exists. Doesn't create
+				HttpSession ses = request.getSession();
+				ses.setAttribute("user", request.getParameter("user"));
+				response.sendRedirect("index.jsp?msg=Logged in");
+			} else if(uri.endsWith("logout.do")) {
+				HttpSession ses = request.getSession(false);
+				if(ses != null) {
+					ses.invalidate(); // terminate the session
+				}
 			}
 		}
 	}

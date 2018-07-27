@@ -9,6 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<div>
+		Welcome ${sessionScope.user}
+	</div>
 	<h2>Rental Report</h2>
 	<table border="1">
 		<tr>

@@ -9,12 +9,16 @@
 <body>
 	<h3>Vehicle rental Application</h3>
 	<div>
+		Welcome ${sessionScope.user}
+	</div>
+	<div>
 		${param.msg}
 	</div>
 	<a href="vehicleForm.html">Add Vehicle</a> <br />
 	<a href="customerForm.html">Add Customer</a> <br />
 	<a href="rentalForm.do">Rent a Vehicle</a> <br />
 	<a href="report.do">Rental Report</a> <br />
+	<a href="login.jsp">Login</a>
 
 </body>
 </html>

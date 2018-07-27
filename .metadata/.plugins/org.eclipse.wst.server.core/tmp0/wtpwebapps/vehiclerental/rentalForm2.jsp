@@ -8,6 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<div>
+		Welcome ${sessionScope.user}
+	</div>
 	<h2>Rental Form</h2>
 	<form method="post" action="hireVehicle.do">
 		Select vehicle:
