@@ -1,0 +1,49 @@
+package com.visa.prj.config;
+
+import java.util.Properties;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+@Configuration
+@EnableTransactionManagement
+@ComponentScan("com.visa")
+public class AppConfig {
+
+		@Bean
+		public DriverManagerDataSource dataSource() {
+			DriverManagerDataSource ds = new DriverManagerDataSource();
+			ds.setDriverClassName("com.mysql.jdbc.Driver");
+			ds.setUrl("jdbc:mysql://localhost:3306/event_mgmt_db?createDatabaseIfNotExist=true");
+			ds.setUsername("root");
+			ds.setPassword("mysqlroot");
+			return ds;
+		}
+		
+		@Bean
+		public LocalContainerEntityManagerFactoryBean entityManager() {
+			LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
+			emf.setDataSource(dataSource());
+			emf.setPackagesToScan("com.visa.prj.entity");
+			emf.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
+			
+			Properties props = new Properties();
+			props.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+			props.put("hibernate.hbm2ddl.auto", "update");
+			
+			emf.setJpaProperties(props);
+			return emf;
+		}
+		
+		@Bean
+		public PlatformTransactionManager transactionManager() {
+			return new JpaTransactionManager();
+		}
+}

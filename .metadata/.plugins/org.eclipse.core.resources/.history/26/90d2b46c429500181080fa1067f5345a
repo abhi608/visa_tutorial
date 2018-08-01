@@ -1,0 +1,31 @@
+package com.visa.prj.web;
+
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.visa.prj.entity.Event;
+import com.visa.prj.service.EventService;
+
+@Controller
+public class EventController {
+
+	@Autowired
+	private EventService service;
+	
+	@RequestMapping("eventForm.do")
+	public String getUserForm(Model model) { //variant of ModelAndView
+		model.addAttribute("event", new Event(0, "EVENT NAME", new Date(), "Bangalore"));
+		return "eventform.jsp";
+	}
+	
+	@RequestMapping("addEvent.do")
+	public String addBook(@ModelAttribute("event") Event e) {
+		service.addEevent(e);
+		return "redirect:index.jsp"; // redirect is needed to redirect | if redirect not present, it will not change the address in the address bar
+	}
+}

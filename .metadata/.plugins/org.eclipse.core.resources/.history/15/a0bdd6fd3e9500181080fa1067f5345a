@@ -1,0 +1,27 @@
+package com.visa.prj.dao;
+
+import java.util.List;
+
+import com.visa.prj.entity.Event;
+
+public class EventDaoJpaImpl implements EventDao {
+
+	@Override
+	public void addEevent(Event event) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Event> getOpenEvents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Event> getClosedEvents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

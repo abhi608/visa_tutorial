@@ -1,0 +1,26 @@
+package com.visa.prj.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.visa.prj.entity.Book;
+
+@Controller
+public class BookController {
+
+		@RequestMapping("bookform.do")
+		public String getBookForm(Model model) { //variant of ModelAndView
+			model.addAttribute("book", new Book());
+			return "bookform.jsp";
+		}
+		
+		@RequestMapping("addBook.do")
+		public String addBook(@ModelAttribute("book") Book b) {
+			System.out.println(b.getTitle());
+			System.out.println(b.getPrice());
+			System.out.println(b.getCategory());
+			return "index.jsp";
+		}
+}

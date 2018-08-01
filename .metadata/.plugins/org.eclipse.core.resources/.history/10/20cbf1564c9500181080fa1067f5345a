@@ -1,0 +1,13 @@
+package com.visa.prj.dao;
+
+import com.visa.prj.entity.Registration;
+
+public class RegistrationDaoJpaImpl implements RegistrationDao {
+
+	@Override
+	public void register(Registration reg) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

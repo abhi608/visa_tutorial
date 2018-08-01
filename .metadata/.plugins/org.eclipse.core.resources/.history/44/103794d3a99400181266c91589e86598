@@ -1,0 +1,5 @@
+package org.visa.prj.dao;
+
+public interface UserDao {
+
+}

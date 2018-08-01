@@ -1,0 +1,7 @@
+package com.visa.prj.web;
+
+import java.beans.PropertyEditorSupport;
+
+public class AddressPropertyEditor extends PropertyEditorSupport {
+
+}

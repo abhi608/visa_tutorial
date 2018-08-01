@@ -1,0 +1,9 @@
+package com.visa.prj.dao;
+
+import com.visa.prj.entity.Event;
+
+
+public interface EventDao {
+	void addEevent(Event event);
+	List<Event> 
+}

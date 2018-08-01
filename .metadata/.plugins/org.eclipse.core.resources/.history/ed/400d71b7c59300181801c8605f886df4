@@ -1,0 +1,11 @@
+package com.visa.prj.dao;
+
+public class ProductDaoJdbcImpl implements ProductDao {
+
+	@Override
+	public void addProduct() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

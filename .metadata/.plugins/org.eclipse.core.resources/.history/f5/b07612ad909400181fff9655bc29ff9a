@@ -1,0 +1,4 @@
+book.id.required=Please enter book id :-(
+book.title.required=Please enter title :-(
+book.price.required=Please enter PRICE greater than ZEro :-(
+type.java.lang.NumberFormatException=ID should  be number

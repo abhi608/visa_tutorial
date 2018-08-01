@@ -1,0 +1,64 @@
+package com.visa.prj.web;
+
+import java.io.IOException;
+
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.validation.Validator;
+
+import org.springframework.validation.Errors;
+import org.w3c.dom.ls.LSResourceResolver;
+import org.xml.sax.ErrorHandler;
+import org.xml.sax.SAXException;
+
+public class BookValidator extends Validator implements org.springframework.validation.Validator {
+
+	@Override
+	public boolean supports(Class<?> arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void validate(Object arg0, Errors arg1) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public ErrorHandler getErrorHandler() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public LSResourceResolver getResourceResolver() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void reset() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setErrorHandler(ErrorHandler arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setResourceResolver(LSResourceResolver arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void validate(Source arg0, Result arg1) throws SAXException, IOException {
+		// TODO Auto-generated method stub
+
+	}
+
+}
