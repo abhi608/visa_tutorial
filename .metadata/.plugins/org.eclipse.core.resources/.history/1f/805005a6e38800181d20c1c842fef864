@@ -1,9 +1,0 @@
-package com.visa.prj.client;
-
-import com.visa.prj.entity.Project;
-
-public class ProductClient {
-	public static void main(String[] args) {
-		Project[] products = new Project[4];
-	}
-}

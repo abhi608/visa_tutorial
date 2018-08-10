@@ -1,7 +1,0 @@
-package com.visa.prj.entity;
-
-public class Project {
-	private int id;
-	private String name;
-	private double price;
-}

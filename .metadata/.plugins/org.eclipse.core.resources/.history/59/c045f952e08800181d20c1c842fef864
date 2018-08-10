@@ -1,7 +1,0 @@
-package com.visa.prj.entity;
-
-import Product;
-
-public class Mobile extends Product {
-
-}

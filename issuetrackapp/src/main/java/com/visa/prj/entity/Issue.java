@@ -45,7 +45,7 @@ public class Issue {
 	@JoinColumn(name="issue_resolved_by_fk")
 	private Employee issueResolvedBy;
 	
-	@JoinColumn(name="status", nullable=false)
+	@Column(name="status", nullable=false)
 	private int status;
 
 	@Override

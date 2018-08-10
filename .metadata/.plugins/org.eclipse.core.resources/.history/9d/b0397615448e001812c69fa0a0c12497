@@ -1,7 +1,0 @@
-package com.visa.prj.dao;
-
-import antlr.collections.List;
-
-public interface ProductDao {
-	List<Product> getProducts() throws DaoException;
-}
