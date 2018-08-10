@@ -1,0 +1,82 @@
+package com.visa.prj.service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.visa.prj.dao.CustomerDao;
+import com.visa.prj.dao.ProductDao;
+import com.visa.prj.entity.Customer;
+import com.visa.prj.entity.Product;
+
+@Service
+public class ShopService {
+
+	@Autowired
+	private ProductDao productDao;
+	
+	@Autowired
+	private CustomerDao customerDao;
+	
+	public Product getById(int id) {
+		return productDao.findById(id).get();
+	}
+	
+	public Customer getCustomerByEmail(String email) {
+		return customerDao.getCustomerByEmail(email);
+	}
+	
+	public List<Product> getProducts() {
+		return productDao.findAll();
+	}
+	
+	public List<Customer> getCustomers(){
+		return customerDao.findAll();
+	}
+	
+	public List<Product> getAvailableProducts() {
+		return productDao.getAvailableProducts();
+	}
+	
+	@Transactional
+	public void addProduct(Product p ) {
+		productDao.save(p);
+	}
+	
+	@Transactional
+	public void addCustomer(Customer c) {
+		customerDao.save(c);
+	}
+	
+	@Transactional
+	public void deleteProduct(int id) {
+		Product p = productDao.findById(id).get();
+		productDao.delete(p);
+	}
+	
+	@Transactional
+	public void deleteCustomer(String email) {
+		Customer c = this.getCustomerByEmail(email);
+		customerDao.delete(c);
+	}
+	
+	@Transactional
+	public void updateProduct(int id, Product prd) {
+		Product p = productDao.getOne(id);
+		p.setName(prd.getName());
+		p.setPrice(prd.getPrice());
+		p.setQuantity(prd.getQuantity());
+	}
+	
+	@Transactional
+	public void updateCustomer(String email, Customer cus) {
+		Customer c = this.getCustomerByEmail(email);
+		c.setEmail(cus.getEmail());
+		c.setFirstName(cus.getFirstName());
+		c.setLastName(cus.getLastName());
+	}
+	
+}

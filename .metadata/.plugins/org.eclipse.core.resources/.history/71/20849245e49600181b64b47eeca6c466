@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js">
+</script>
+</head>
+<body>
+	<script type="text/template" id="prdsTemplate">
+		<table>
+			<tr><th>ID</th><th>Name</th><th>Price</th><th>Quantity</th></tr>
+			{{#.}}
+				<tr>
+					<td>{{id}}</td>
+					<td>{{name}}</td>
+					<td>{{price}}</td>
+					<td>{{quantity}}</td>
+				</tr>
+
+			{{/.}}
+		</table>
+	</script>
+	<div id="prds"></div>
+	<script type="text/javascript">
+		//document on ready function
+		$(function() {
+			var prds$ = $("#prds");
+			var prdsTempl$ = $("#prdsTemplate").html();
+			
+			$.getJSON("http://localhost:8080/api/products", function(products) {
+				var content = Mustache.render(prdsTempl$, products);
+				prds$.html(content);
+			});
+		});
+	</script>
+</body>
+</html>

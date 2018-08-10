@@ -1,0 +1,31 @@
+package com.visa.prj.dao;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.visa.prj.entity.Booking;
+
+
+
+public interface BookingDao extends JpaRepository<Booking, Integer> {
+
+	@Query("from Booking b order by b.bookingDate")
+	List<Booking> getSortedBooking();
+	
+<<<<<<< HEAD
+	@Query("from Booking b where DATE(b.fromDate) = DATE(:date) ")
+	List<Booking> getBookingByDate(@Param ("date") Date date);
+=======
+	@Query("select b,DATE(b.fromDate) as bookdate from Booking b")
+	List<Booking> getBookingsNDates();
+>>>>>>> 3efdc097442730aa8e59bf9f604f6d9d2647e790
+	
+	@Query("from Booking b where DATE(b.bookingDate) = DATE(:date) ")
+	List<Booking> getBookingMadeByDate(@Param ("date") Date date);
+
+
+}

@@ -31,3 +31,9 @@
 0:0:0:0:0:0:0:1 - - [01/Aug/2018:06:36:49 +0100] "GET /event_management/ HTTP/1.1" 200 423
 0:0:0:0:0:0:0:1 - - [01/Aug/2018:06:37:27 +0100] "GET /event_management/eventRegisterForm.do HTTP/1.1" 200 915
 0:0:0:0:0:0:0:1 - - [01/Aug/2018:06:37:38 +0100] "POST /event_management/register.do HTTP/1.1" 404 992
+127.0.0.1 - - [01/Aug/2018:07:04:51 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [01/Aug/2018:07:04:51 +0100] "GET /event_management/ HTTP/1.1" 200 423
+0:0:0:0:0:0:0:1 - - [01/Aug/2018:07:04:54 +0100] "GET /event_management/eventRegisterForm.do HTTP/1.1" 200 915
+0:0:0:0:0:0:0:1 - - [01/Aug/2018:07:05:09 +0100] "POST /event_management/register.do HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [01/Aug/2018:07:05:09 +0100] "GET /event_management/index.jsp?registered%20successfully!!! HTTP/1.1" 200 423
+0:0:0:0:0:0:0:1 - - [01/Aug/2018:07:23:22 +0100] "GET /event_management/eventRegisterForm.do HTTP/1.1" 200 915

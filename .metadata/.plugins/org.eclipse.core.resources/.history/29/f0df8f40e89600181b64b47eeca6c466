@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js">
+</script>
+</head>
+<body>
+	 
+	<div id="ords"></div>
+	<script type="text/javascript">
+		//document on ready function
+		$(function() {
+			var ords$ = $("#ords");
+			var ordsTempl$;
+			$.get("templates/order.html",function(templ) {
+				ordsTempl$ = templ;
+			 });
+			
+			$.getJSON("http://localhost:8080/api/orders", function(orders) {
+				 
+				var content = Mustache.render(ordsTempl$, orders);
+				ords$.html(content);
+			});
+		});
+	</script>
+</body>
+</html>

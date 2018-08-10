@@ -1,0 +1,16 @@
+{{#.}}
+              <div class="card3" >
+                        <div class="card-body">
+                                <h5 class="card-title">Reservations</h5>
+                                <hr>
+                                <input type="date" name="date" id="reservatioDate">
+                                <button type="button" id="reservations">Search</button><br/>
+                                <hr>
+                                <div class="card-text">
+                                        <p>Room</p>
+                                        <p>Client</p>
+                                        <p>fromtime - totime</p>
+                                </div>
+                        </div>
+              </div>
+            {{/.}}
